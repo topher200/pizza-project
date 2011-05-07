@@ -11,7 +11,16 @@ namespace AnderaPizzaCompany
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            String pizza_type = Request.QueryString["pizza"];
+            if (pizza_type == "cheese")
+            {
+                // TODO(topher)
+            }
+            else
+            {
+                // We don't know what kind of pizza this is
+                Response.Redirect("OrderPizza.aspx");
+            }
         }
     }
 }
