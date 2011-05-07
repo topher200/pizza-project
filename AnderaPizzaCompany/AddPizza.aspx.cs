@@ -14,13 +14,15 @@ namespace AnderaPizzaCompany
             String pizza_type = Request.QueryString["pizza"];
             if (pizza_type == "cheese")
             {
-                // TODO(topher)
+                Session["pizza"] = "cheese";
             }
             else
             {
                 // We don't know what kind of pizza this is
-                Response.Redirect("OrderPizza.aspx");
             }
+
+            // After [possibly] adding a pizza, go back to the order page
+            Response.Redirect("OrderPizza.aspx");
         }
     }
 }

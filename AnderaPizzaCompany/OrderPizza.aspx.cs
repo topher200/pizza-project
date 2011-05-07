@@ -11,7 +11,7 @@ namespace AnderaPizzaCompany
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            String pizza = (String)Session["pizza"];
         }
     }
 }
