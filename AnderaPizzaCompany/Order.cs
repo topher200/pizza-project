@@ -7,7 +7,7 @@ namespace AnderaPizzaCompany
 {
     public class Order
     {
-        private int reference_number;
+        public int reference_number;
 
         public Order()
         {

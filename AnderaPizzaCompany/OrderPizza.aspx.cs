@@ -11,7 +11,12 @@ namespace AnderaPizzaCompany
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String pizza = (String)Session["pizza"];
+            Order order = (Order)Session["order"];
+
+            if (order != null)
+            {
+                int reference = order.reference_number;
+            }
         }
     }
 }

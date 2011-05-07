@@ -14,7 +14,8 @@ namespace AnderaPizzaCompany
             String pizza_type = Request.QueryString["pizza"];
             if (pizza_type == "cheese")
             {
-                Session["pizza"] = "cheese";
+                Order order = new Order();
+                Session["order"] = order;
             }
             else
             {
