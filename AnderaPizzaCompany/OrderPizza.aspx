@@ -9,6 +9,6 @@
         Which pizza would you like?
     </p>
     <p>
-        <a href="AddPizza.aspx">Cheese Pizza</a>
+        <a href="AddPizza.aspx?pizza=cheese">Cheese Pizza</a>
     </p>
 </asp:Content>
