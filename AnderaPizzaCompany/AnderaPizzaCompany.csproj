@@ -124,6 +124,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs" />
     <Compile Include="OrderPizza.aspx.cs">
       <DependentUpon>OrderPizza.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
