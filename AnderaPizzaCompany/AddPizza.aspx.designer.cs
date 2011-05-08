@@ -13,12 +13,12 @@ namespace AnderaPizzaCompany {
     public partial class AddPizza {
         
         /// <summary>
-        /// broccoli control.
+        /// checkbox_broccoli control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox broccoli;
+        protected global::System.Web.UI.WebControls.CheckBox checkbox_broccoli;
     }
 }

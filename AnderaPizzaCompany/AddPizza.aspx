@@ -6,9 +6,9 @@
         Add a Pizza to your order
     </h2>
     <p>
-        <asp:CheckBox Text="Broccoli" runat="server" id="broccoli"/>
+        <asp:CheckBox Text="Broccoli" runat="server" id="checkbox_broccoli"/>
     </p>
     <p>
-        <asp:Button Text="Add Pizza to Order" runat="server" OnClick="Submit"/>
+        <asp:Button Text="Add Pizza to Order" runat="server" onclick="Submit"/>
     </p>
 </asp:Content>

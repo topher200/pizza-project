@@ -17,14 +17,17 @@ namespace AnderaPizzaCompany
         {
             Order order = (Order)Session["order"];
 
-            String pizza_type = Request.QueryString["pizza"];
-            if (pizza_type == "cheese")
+            if (order != null)
             {
+                bool broccoli = checkbox_broccoli.Checked;
+
+                String pizza_type = Request.QueryString["pizza"];
                 order.AddPizza(pizza_type);
+
+                // After adding a pizza, go back to the order page
+                Session["order"] = order;
             }
 
-            // After adding a pizza, go back to the order page
-            Session["order"] = order;
             Response.Redirect("OrderPizza.aspx");
         }
     }
