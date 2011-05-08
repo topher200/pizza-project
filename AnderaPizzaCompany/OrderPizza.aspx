@@ -17,4 +17,8 @@
         <button id="cheese" onserverclick="Click" runat="server">
             Cheese Button</button>
     </p>
+    <p>
+        <button id="checkout" onserverclick="OnCheckoutButton" runat="server">
+            Go to Checkout</button>
+    </p>
 </asp:Content>

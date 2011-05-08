@@ -29,5 +29,10 @@ namespace AnderaPizzaCompany
         {
             Response.Redirect("AddPizza.aspx?pizza=cheese");
         }
+
+        protected void OnCheckoutButton(Object s, EventArgs e)
+        {
+            Response.Redirect("Checkout.aspx");
+        }
     }
 }
