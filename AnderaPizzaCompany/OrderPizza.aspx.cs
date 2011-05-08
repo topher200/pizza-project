@@ -19,7 +19,7 @@ namespace AnderaPizzaCompany
 
             if (order.pizzas.Count > 0)
             {
-                label_pizza0.Text = order.pizzas[0];
+                // label_pizza0.Text = order.pizzas[0];
             }
 
             Session["order"] = order;

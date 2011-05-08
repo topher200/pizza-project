@@ -19,12 +19,18 @@ namespace AnderaPizzaCompany
 
             if (order != null)
             {
-                bool broccoli = checkbox_broccoli.Checked;
-
+                // Create a new pizza of the given type
                 String pizza_type = Request.QueryString["pizza"];
-                order.AddPizza(pizza_type);
+                Pizza pizza = new Pizza(pizza_type);
 
-                // After adding a pizza, go back to the order page
+                // Add checked toppings to the pizza
+                if (checkbox_broccoli.Checked)
+                {
+                    pizza.AddTopping("broccoli");
+                }
+
+                // Add the pizza to the order, and go back to the order page
+                order.AddPizza(pizza);
                 Session["order"] = order;
             }
 

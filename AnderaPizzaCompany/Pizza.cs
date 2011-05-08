@@ -8,8 +8,11 @@ namespace AnderaPizzaCompany
     public class Pizza
     {
         public List<string> toppings;
-        private Pizza()
+        public String type;
+
+        public Pizza(String type_)
         {
+            type = type_;
             toppings = new List<string>();
         }
 
