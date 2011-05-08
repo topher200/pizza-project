@@ -24,5 +24,10 @@ namespace AnderaPizzaCompany
 
             Session["order"] = order;
         }
+
+        protected void Click(Object s, EventArgs e)
+        {
+            Response.Redirect("AddPizza.aspx?pizza=cheese");
+        }
     }
 }
