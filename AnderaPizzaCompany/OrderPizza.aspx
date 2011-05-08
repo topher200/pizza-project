@@ -6,12 +6,14 @@
         Pizza Ordering Page
     </h2>
     <p>
-        You currently have this these pizzas:
-        <asp:Label ID="pizzas_label" Text="" runat="server" />
+        You currently have these pizzas:
+        <br />
+        <asp:Label ID="label_pizza0" Text="" runat="server" />
     </p>
     <p>
-        Which pizza would you like?
-        <br />
+        Would you like to add a pizza to your order?
+    </p>
+    <p>
         <button id="cheese" onserverclick="Click" runat="server">
             Cheese Button</button>
     </p>

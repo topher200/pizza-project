@@ -17,10 +17,9 @@ namespace AnderaPizzaCompany
                 order = new Order();
             }
 
-            pizzas_label.Text = "";
-            foreach (string pizza in order.pizzas)
+            if (order.pizzas.Count > 0)
             {
-                pizzas_label.Text += "asdf";
+                label_pizza0.Text = order.pizzas[0];
             }
 
             Session["order"] = order;

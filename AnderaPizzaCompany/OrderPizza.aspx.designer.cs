@@ -13,13 +13,13 @@ namespace AnderaPizzaCompany {
     public partial class OrderPizza {
         
         /// <summary>
-        /// pizzas_label control.
+        /// label_pizza0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pizzas_label;
+        protected global::System.Web.UI.WebControls.Label label_pizza0;
         
         /// <summary>
         /// cheese control.
