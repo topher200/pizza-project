@@ -11,6 +11,10 @@ namespace AnderaPizzaCompany
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
+
+        protected void Submit(object sender, EventArgs e)
+        {
             Order order = (Order)Session["order"];
 
             String pizza_type = Request.QueryString["pizza"];
@@ -19,7 +23,7 @@ namespace AnderaPizzaCompany
                 order.AddPizza(pizza_type);
             }
 
-            // After [possibly] adding a pizza, go back to the order page
+            // After adding a pizza, go back to the order page
             Session["order"] = order;
             Response.Redirect("OrderPizza.aspx");
         }
