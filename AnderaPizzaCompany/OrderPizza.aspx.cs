@@ -12,11 +12,17 @@ namespace AnderaPizzaCompany
         protected void Page_Load(object sender, EventArgs e)
         {
             Order order = (Order)Session["order"];
+            if (order == null)
+            {
+                order = new Order();
+            }
 
             if (order != null)
             {
                 int reference = order.reference_number;
             }
+
+            Session["order"] = order;
         }
     }
 }
