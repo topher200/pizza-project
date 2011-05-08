@@ -6,8 +6,8 @@
         Pizza Ordering Page
     </h2>
     <p>
-        You currently have this many pizzas:
-        <asp:Label ID="num_pizzas_label" Text="11" runat="server" />
+        You currently have this these pizzas:
+        <asp:Label ID="pizzas_label" Text="" runat="server" />
     </p>
     <p>
         Which pizza would you like?
