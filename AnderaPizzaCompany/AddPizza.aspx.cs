@@ -11,6 +11,19 @@ namespace AnderaPizzaCompany
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // TODO(topher): make these "class" variables
+            Order order = (Order)Session["order"];
+            if (order == null)
+            {
+                // We can't add a pizza if we haven't started an order yet
+                Response.Redirect("OrderPizza.aspx");
+            }
+            String pizza_type = Request.QueryString["pizza"];
+            if (pizza_type == null)
+            {
+                // We can't add a pizza if we don't know its type
+                Response.Redirect("OrderPizza.aspx");
+            }
         }
 
         protected void Submit(object sender, EventArgs e)
