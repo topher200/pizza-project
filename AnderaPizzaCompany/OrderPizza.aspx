@@ -6,9 +6,12 @@
         Pizza Ordering Page
     </h2>
     <p>
-        Which pizza would you like?
+        You currently have this many pizzas:
+        <asp:Label ID="num_pizzas_label" Text="11" runat="server" />
     </p>
     <p>
+        Which pizza would you like?
+        <br />
         <button id="cheese" onserverclick="Click" runat="server">
             Cheese Button</button>
     </p>

@@ -17,11 +17,7 @@ namespace AnderaPizzaCompany
                 order = new Order();
             }
 
-            if (order != null)
-            {
-                int reference = order.reference_number;
-            }
-
+            num_pizzas_label.Text = order.pizzas.Count.ToString();
             Session["order"] = order;
         }
 
