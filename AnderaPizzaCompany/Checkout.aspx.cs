@@ -25,8 +25,14 @@ namespace AnderaPizzaCompany
         protected void OnSubmitButton(Object s, EventArgs e)
         {
             XDocument xml = new XDocument(
-                new XElement("Pizza1")
+                new XElement("order",
+                    new XElement("reference_number", order.GetReferenceNumber().ToString()),
+                    new XElement("pizzas",
+                        order.pizzas.Select(pizza => new XElement("pizza", 
+                            new XAttribute("type", pizza.type),
+                            pizza.toppings.Select(topping => new XElement("topping", topping))))))
                 );
+
             // TODO(topher): where should this file be saved?
             string output_filename = @"C:\Users\topher\Documents\order_" + 
                 order.GetReferenceNumber() + ".xml";
