@@ -28,8 +28,10 @@ namespace AnderaPizzaCompany
                 new XElement("Pizza1")
                 );
             // TODO(topher): where should this file be saved?
+            string output_filename = @"C:\Users\topher\Documents\order_" + 
+                order.GetReferenceNumber() + ".xml";
             using (System.IO.FileStream fs = 
-                System.IO.File.Create(@"C:\Users\topher\Documents\asdf.txt"))
+                System.IO.File.Create(output_filename))
             {
                 xml.Save(fs);
             }
