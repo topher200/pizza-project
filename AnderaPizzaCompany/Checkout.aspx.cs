@@ -28,8 +28,10 @@ namespace AnderaPizzaCompany
                 new XElement("order",
                     new XElement("reference_number", order.GetReferenceNumber().ToString()),
                     new XElement("pizzas",
-                        order.pizzas.Select(x => new XElement("type", new XAttribute("t", x)))))
+                        order.pizzas.Select(pizza => new XElement("pizza", 
+                            new XAttribute("type", pizza.type)))))
                 );
+
             // TODO(topher): where should this file be saved?
             string output_filename = @"C:\Users\topher\Documents\order_" + 
                 order.GetReferenceNumber() + ".xml";
