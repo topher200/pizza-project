@@ -7,9 +7,14 @@
     </h2>
     <p>
         <asp:CheckBox Text="Broccoli" runat="server" id="checkbox_broccoli"/>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            DataSourceID="Database">
+        <asp:GridView ID="ToppingsGridView" runat="server" AutoGenerateColumns="False" 
+            DataSourceID="Database" >
             <Columns>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:CheckBox ID="ToppingSelector" runat="server" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="topping" HeaderText="Topping" 
                     SortExpression="topping" />
                 <asp:BoundField DataField="cost" HeaderText="Cost" SortExpression="cost" />
