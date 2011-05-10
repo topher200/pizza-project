@@ -7,13 +7,18 @@ namespace AnderaPizzaCompany
 {
     public class Order
     {
-        public int reference_number;
+        private int reference_number;
         public List<Pizza> pizzas;
 
         public Order()
         {
             reference_number = 1337;
             pizzas = new List<Pizza>();
+        }
+
+        public int GetReferenceNumber()
+        {
+            return reference_number;
         }
 
         public void AddPizza(Pizza pizza)
