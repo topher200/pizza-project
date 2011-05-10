@@ -7,6 +7,17 @@
     </h2>
     <p>
         <asp:CheckBox Text="Broccoli" runat="server" id="checkbox_broccoli"/>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+            DataSourceID="Database">
+            <Columns>
+                <asp:BoundField DataField="topping" HeaderText="Topping" 
+                    SortExpression="topping" />
+                <asp:BoundField DataField="cost" HeaderText="Cost" SortExpression="cost" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="Database" runat="server" 
+            ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+            SelectCommand="SELECT * FROM [toppings]"></asp:SqlDataSource>
     </p>
     <p>
         <asp:Button Text="Add Pizza to Order" runat="server" onclick="Submit"/>
