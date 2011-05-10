@@ -15,6 +15,11 @@ namespace AnderaPizzaCompany
         protected void Page_Load(object sender, EventArgs e)
         {
             order = (Order)Session["order"];
+            if (order == null)
+            {
+                // We can't checkout if we haven't started an order yet
+                Response.Redirect("OrderPizza.aspx");
+            }
         }
 
         protected void OnSubmitButton(Object s, EventArgs e)
