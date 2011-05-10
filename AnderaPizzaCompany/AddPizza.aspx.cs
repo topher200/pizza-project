@@ -37,9 +37,14 @@ namespace AnderaPizzaCompany
                 Pizza pizza = new Pizza(pizza_type);
 
                 // Add checked toppings to the pizza
-                if (checkbox_broccoli.Checked)
+                foreach (GridViewRow row in ToppingsGridView.Rows)
                 {
-                    pizza.AddTopping("broccoli");
+                    CheckBox cb = (CheckBox)row.FindControl("ToppingSelector");
+                    if ((cb != null) && (cb.Checked))
+                    {
+                        pizza.AddTopping((string) 
+                            ToppingsGridView.DataKeys[row.RowIndex].Value);
+                    }
                 }
 
                 // Add the pizza to the order, and go back to the order page
