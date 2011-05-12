@@ -22,6 +22,24 @@ namespace AnderaPizzaCompany {
         protected global::System.Web.UI.WebControls.Label label_pizza0;
         
         /// <summary>
+        /// PizzasGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView PizzasGridView;
+        
+        /// <summary>
+        /// DatabasePizzas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource DatabasePizzas;
+        
+        /// <summary>
         /// cheese control.
         /// </summary>
         /// <remarks>
