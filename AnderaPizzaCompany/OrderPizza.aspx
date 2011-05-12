@@ -12,13 +12,16 @@
     </p>
     <p>
         Would you like to add a pizza to your order?
-        <asp:GridView ID="PizzasGridView" runat="server" AutoGenerateColumns="False" 
-            DataSourceID="DatabasePizzas">
+        <asp:GridView ID="PizzasGridView" runat="server" 
+            AutoGenerateColumns="False" DataSourceID="DatabasePizzas"
+            OnRowCommand="PizzasGridView_RowCommand">
             <Columns>
                 <asp:BoundField DataField="name" HeaderText="Pizza" SortExpression="name" />
                 <asp:BoundField DataField="description" HeaderText="Toppings" 
                     SortExpression="description" />
                 <asp:BoundField DataField="cost" HeaderText="Price" SortExpression="cost" />
+                <asp:ButtonField ButtonType="Button" CommandName="AddPizza" 
+                    Text="Add to order!" />
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="DatabasePizzas" runat="server" 

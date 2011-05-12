@@ -30,6 +30,11 @@ namespace AnderaPizzaCompany
             Response.Redirect("AddPizza.aspx?pizza=cheese");
         }
 
+        protected void PizzasGridView_RowCommand(
+            object sender, GridViewCommandEventArgs e)
+        {
+        }
+
         protected void OnCheckoutButton(Object s, EventArgs e)
         {
             Response.Redirect("Checkout.aspx");
