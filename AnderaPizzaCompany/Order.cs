@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 
 namespace AnderaPizzaCompany
 {
@@ -14,6 +15,16 @@ namespace AnderaPizzaCompany
         {
             reference_number = 1337;
             pizzas = new List<Pizza>();
+        }
+
+        public DataTable GetPizzaDataTable()
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("type");
+
+            table.Rows.Add("asdfsafdas");
+
+            return table;
         }
 
         public int GetReferenceNumber()
