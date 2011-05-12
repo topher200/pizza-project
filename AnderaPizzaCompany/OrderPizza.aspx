@@ -14,7 +14,7 @@
         Would you like to add a pizza to your order?
         <asp:GridView ID="PizzasGridView" runat="server" 
             AutoGenerateColumns="False" DataSourceID="DatabasePizzas"
-            OnRowCommand="PizzasGridView_RowCommand">
+            OnRowCommand="PizzasGridView_RowCommand" DataKeyNames="name">
             <Columns>
                 <asp:BoundField DataField="name" HeaderText="Pizza" SortExpression="name" />
                 <asp:BoundField DataField="description" HeaderText="Toppings" 

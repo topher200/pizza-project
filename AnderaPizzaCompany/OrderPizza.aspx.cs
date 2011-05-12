@@ -33,6 +33,8 @@ namespace AnderaPizzaCompany
         protected void PizzasGridView_RowCommand(
             object sender, GridViewCommandEventArgs e)
         {
+            string pizza_name = (string)PizzasGridView.DataKeys[
+                Convert.ToInt32(e.CommandArgument)].Value;
         }
 
         protected void OnCheckoutButton(Object s, EventArgs e)
