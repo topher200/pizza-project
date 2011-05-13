@@ -153,6 +153,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="Topping.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
