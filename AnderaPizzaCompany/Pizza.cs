@@ -25,6 +25,22 @@ namespace AnderaPizzaCompany
             toppings.Add(topping);
         }
 
+        // Returns a string listing the toppings, comma-separated.
+        public string ListToppings()
+        {
+            string toppings_string = "";
+            for (int i = 0; i < toppings.Count(); i++)
+            {
+                if (i != 0)
+                {
+                    // No comma first time though
+                    toppings_string += ", ";
+                }
+                toppings_string += toppings[i].name;
+            }
+            return toppings_string;
+        }
+
         public decimal Cost()
         {
             decimal cost = this.base_cost;
