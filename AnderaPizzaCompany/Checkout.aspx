@@ -5,6 +5,16 @@
     <h2>
         Checkout
     </h2>
+    <h3>
+        Order Summary:
+        <br />
+        <asp:GridView ID="PizzaGridView" runat="server" DataSourceID="OrderObject">
+        </asp:GridView>
+        <asp:ObjectDataSource ID="OrderObject" runat="server" 
+            SelectMethod="GetPizzaDataTable" TypeName="AnderaPizzaCompany.Order"
+            OnObjectCreating="OrderObject_ObjectCreating">
+        </asp:ObjectDataSource>
+    </h3>
     <p>
         <button id="submit" onserverclick="OnSubmitButton" runat="server">
             Submit order!</button>

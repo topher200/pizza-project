@@ -45,5 +45,11 @@ namespace AnderaPizzaCompany
                 xml.Save(fs);
             }
         }
+
+        protected void OrderObject_ObjectCreating(object sender, 
+            ObjectDataSourceEventArgs e)
+        {
+            e.ObjectInstance = (Order)Session["order"];
+        }
     }
 }
