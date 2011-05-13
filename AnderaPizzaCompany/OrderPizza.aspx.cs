@@ -11,6 +11,7 @@ namespace AnderaPizzaCompany
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Start an order if we haven't already
             Order order = (Order)Session["order"];
             if (order == null)
             {
