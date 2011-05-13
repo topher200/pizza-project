@@ -35,8 +35,12 @@ namespace AnderaPizzaCompany
                     CheckBox cb = (CheckBox)row.FindControl("ToppingSelector");
                     if ((cb != null) && (cb.Checked))
                     {
-                        pizza_to_add.AddTopping((string) 
-                            ToppingsGridView.DataKeys[row.RowIndex].Value);
+                        DataKey topping_key = 
+                            ToppingsGridView.DataKeys[row.RowIndex];
+                        string name = (string) topping_key["topping"];
+                        decimal cost = (decimal) topping_key["cost"];
+                        Topping topping = new Topping(name, cost);
+                        pizza_to_add.AddTopping(topping);
                     }
                 }
 

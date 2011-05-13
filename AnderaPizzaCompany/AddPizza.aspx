@@ -8,7 +8,7 @@
     <p>
         <asp:CheckBox Text="Broccoli" runat="server" id="checkbox_broccoli"/>
         <asp:GridView ID="ToppingsGridView" runat="server" AutoGenerateColumns="False" 
-            DataSourceID="Database" DataKeyNames="Topping">
+            DataSourceID="Database" DataKeyNames="topping, cost">
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
