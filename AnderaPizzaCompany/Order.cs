@@ -11,9 +11,9 @@ namespace AnderaPizzaCompany
         private int reference_number;
         public List<Pizza> pizzas;
 
-        public Order()
+        public Order(int reference_number)
         {
-            reference_number = 1337;
+            this.reference_number = reference_number;
             pizzas = new List<Pizza>();
         }
 

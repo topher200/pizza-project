@@ -15,7 +15,20 @@ namespace AnderaPizzaCompany
             Order order = (Order)Session["order"];
             if (order == null)
             {
-                Session["order"] = new Order();
+                // Figure out what reference number we should use
+                Object last_ref = Application["last_reference_number"];
+                int reference_number;
+                if (last_ref == null)
+                {
+                    reference_number = 1;
+                }
+                else
+                {
+                    reference_number = (int) last_ref + 1;
+                }
+                Application["last_reference_number"] = reference_number;
+
+                Session["order"] = new Order(reference_number);
             }
         }
 
