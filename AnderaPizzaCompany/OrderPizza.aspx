@@ -11,7 +11,8 @@
         <asp:GridView ID="PizzaGridView" runat="server" DataSourceID="OrderObject">
         </asp:GridView>
         <asp:ObjectDataSource ID="OrderObject" runat="server" 
-            SelectMethod="GetPizzaDataTable" TypeName="AnderaPizzaCompany.Order">
+            SelectMethod="GetPizzaDataTable" TypeName="AnderaPizzaCompany.Order"
+            OnObjectCreating="OrderObject_ObjectCreating">
         </asp:ObjectDataSource>
     </p>
     <p>

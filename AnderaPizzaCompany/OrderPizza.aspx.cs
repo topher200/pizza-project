@@ -40,5 +40,11 @@ namespace AnderaPizzaCompany
         {
             Response.Redirect("Checkout.aspx");
         }
+
+        protected void OrderObject_ObjectCreating(object sender, 
+            ObjectDataSourceEventArgs e)
+        {
+            e.ObjectInstance = (Order)Session["order"];
+        }
     }
 }
