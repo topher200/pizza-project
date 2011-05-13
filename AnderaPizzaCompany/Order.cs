@@ -20,9 +20,13 @@ namespace AnderaPizzaCompany
         public DataTable GetPizzaDataTable()
         {
             DataTable table = new DataTable();
-            table.Columns.Add("type");
+            table.Columns.Add("Pizza");
+            table.Columns.Add("Cost");
 
-            table.Rows.Add("asdfsafdas");
+            foreach (Pizza p in pizzas)
+            {
+                table.Rows.Add(p.name, p.Cost());
+            }
 
             return table;
         }
