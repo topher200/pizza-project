@@ -61,6 +61,7 @@
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Checkout.aspx" />
+    <Content Include="OrderComplete.aspx" />
     <Content Include="OrderPizza.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -137,6 +138,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Order.cs" />
+    <Compile Include="OrderComplete.aspx.cs">
+      <DependentUpon>OrderComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderComplete.aspx.designer.cs">
+      <DependentUpon>OrderComplete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="OrderPizza.aspx.cs">
       <DependentUpon>OrderPizza.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
