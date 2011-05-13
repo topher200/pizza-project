@@ -5,9 +5,13 @@
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <h2>
-        About
+        About Us
     </h2>
     <p>
-        Put content here.
+        Andera Pizza Company
+        204 Westminster Street
+        Providence, RI 02903
+
+        Tel: 401.555.1212
     </p>
 </asp:Content>
