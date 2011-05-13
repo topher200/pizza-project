@@ -33,8 +33,19 @@ namespace AnderaPizzaCompany
         protected void PizzasGridView_RowCommand(
             object sender, GridViewCommandEventArgs e)
         {
-            string pizza_name = (string)PizzasGridView.DataKeys[
-                Convert.ToInt32(e.CommandArgument)].Value;
+            // TODO(topher): Instead of polling the asp fields, is there a 
+            // better way we should be getting this data?
+            DataKey pizza = PizzasGridView.DataKeys[
+                Convert.ToInt32(e.CommandArgument)];
+            string name = (string)pizza["name"];
+            string base_toppings = (string)pizza["description"];
+            decimal cost = (decimal)pizza["cost"];
+
+            // TODO(topher): Is there a better way to pass a temporary object
+            // to the next page? Should we be creating the Pizza on the next page?
+            Session["pizza_to_add"] = new Pizza(name, base_toppings, cost);
+
+            Response.Redirect("AddPizza.aspx");
         }
 
         protected void OnCheckoutButton(Object s, EventArgs e)
