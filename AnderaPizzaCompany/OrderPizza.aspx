@@ -38,5 +38,7 @@
     <p>
         <button id="checkout" onserverclick="OnCheckoutButton" runat="server">
             Go to Checkout</button>
+        <button id="cancel" onserverclick="Cancel" runat="server">
+            Cancel Order</button>
     </p>
 </asp:Content>

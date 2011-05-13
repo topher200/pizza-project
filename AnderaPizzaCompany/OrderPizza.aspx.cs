@@ -42,6 +42,13 @@ namespace AnderaPizzaCompany
             Response.Redirect("Checkout.aspx");
         }
 
+        protected void Cancel(Object s, EventArgs e)
+        {
+            // Kick back out to main page
+            Session["order"] = null;
+            Response.Redirect("Default.aspx");
+        }
+
         protected void OrderObject_ObjectCreating(object sender, 
             ObjectDataSourceEventArgs e)
         {
