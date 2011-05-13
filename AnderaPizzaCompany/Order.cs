@@ -39,6 +39,16 @@ namespace AnderaPizzaCompany
             return reference_number;
         }
 
+        public decimal Cost()
+        {
+            decimal cost = 0;
+            foreach (Pizza p in pizzas)
+            {
+                cost += p.Cost();
+            }
+            return cost;
+        }
+
         public void AddPizza(Pizza pizza)
         {
             pizzas.Add(pizza);
