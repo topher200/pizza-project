@@ -20,5 +20,7 @@
     <p>
         <button id="submit" onserverclick="OnSubmitButton" runat="server">
             Submit order!</button>
+        <button id="cancel_button" onserverclick="Cancel" runat="server">
+            Cancel order</button>
     </p>
 </asp:Content>
