@@ -7,12 +7,16 @@ namespace AnderaPizzaCompany
 {
     public class Pizza
     {
+        public String name;
+        public String base_toppings;
+        public decimal cost;
         public List<string> toppings;
-        public String type;
 
-        public Pizza(String type_)
+        public Pizza(String name, String base_toppings, decimal cost)
         {
-            type = type_;
+            this.name = name;
+            this.base_toppings = base_toppings;
+            this.cost = cost;
             toppings = new List<string>();
         }
 

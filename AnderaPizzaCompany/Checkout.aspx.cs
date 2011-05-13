@@ -29,7 +29,7 @@ namespace AnderaPizzaCompany
                     new XElement("reference_number", order.GetReferenceNumber().ToString()),
                     new XElement("pizzas",
                         order.pizzas.Select(pizza => new XElement("pizza", 
-                            new XAttribute("type", pizza.type),
+                            new XAttribute("name", pizza.name),
                             pizza.toppings.Select(topping => new XElement("topping", topping))))))
                 );
 
