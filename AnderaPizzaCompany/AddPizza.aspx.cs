@@ -20,7 +20,6 @@ namespace AnderaPizzaCompany
                 // the pizza
                 Response.Redirect("OrderPizza.aspx");
             }
-            Session["pizza_to_add"] = null;
         }
 
         protected void Submit(object sender, EventArgs e)
