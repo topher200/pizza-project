@@ -13,15 +13,6 @@ namespace AnderaPizzaCompany {
     public partial class OrderPizza {
         
         /// <summary>
-        /// label_pizza0 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label_pizza0;
-        
-        /// <summary>
         /// PizzaGridView control.
         /// </summary>
         /// <remarks>
@@ -56,15 +47,6 @@ namespace AnderaPizzaCompany {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource DatabasePizzas;
-        
-        /// <summary>
-        /// cheese control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton cheese;
         
         /// <summary>
         /// checkout control.

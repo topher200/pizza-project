@@ -14,20 +14,8 @@ namespace AnderaPizzaCompany
             Order order = (Order)Session["order"];
             if (order == null)
             {
-                order = new Order();
+                Session["order"] = new Order();
             }
-
-            if (order.pizzas.Count > 0)
-            {
-                // label_pizza0.Text = order.pizzas[0];
-            }
-
-            Session["order"] = order;
-        }
-
-        protected void Click(Object s, EventArgs e)
-        {
-            Response.Redirect("AddPizza.aspx?pizza=cheese");
         }
 
         protected void PizzasGridView_RowCommand(

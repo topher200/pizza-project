@@ -8,7 +8,6 @@
     <p>
         You currently have these pizzas:
         <br />
-        <asp:Label ID="label_pizza0" Text="" runat="server" />
         <asp:GridView ID="PizzaGridView" runat="server" DataSourceID="OrderObject">
         </asp:GridView>
         <asp:ObjectDataSource ID="OrderObject" runat="server" 
@@ -33,10 +32,6 @@
         <asp:SqlDataSource ID="DatabasePizzas" runat="server" 
             ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
             SelectCommand="SELECT * FROM [pizzas]"></asp:SqlDataSource>
-    </p>
-    <p>
-        <button id="cheese" onserverclick="Click" runat="server">
-            Cheese Button</button>
     </p>
     <p>
         <button id="checkout" onserverclick="OnCheckoutButton" runat="server">
