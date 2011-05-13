@@ -22,5 +22,5 @@
         <br />
         Your order will be ready in 30 minutes or it's free!
     </p>
-    <asp:Button runat="server" ID="home" OnClick="GoHome"/>
+    <asp:Button runat="server" ID="home" OnClick="GoHome" Text="Home" />
 </asp:Content>
