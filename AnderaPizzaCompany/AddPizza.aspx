@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        Add a Pizza to your order
+        Choose your extra toppings
     </h2>
     <p>
         <asp:GridView ID="ToppingsGridView" runat="server" AutoGenerateColumns="False" 
