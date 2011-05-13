@@ -29,9 +29,12 @@ namespace AnderaPizzaCompany
                     new XElement("reference_number", order.GetReferenceNumber().ToString()),
                     new XElement("pizzas",
                         order.pizzas.Select(pizza => new XElement("pizza", 
-                            new XAttribute("name", pizza.name),
-                            pizza.toppings.Select(topping => new XElement("topping", topping))))))
-                );
+                            new XElement("name", pizza.name),
+                            new XElement("base_toppings", pizza.base_toppings),
+                            pizza.toppings.Select(topping => 
+                                new XElement("extra_topping", topping.name)),
+                            new XElement("cost", pizza.Cost())))),
+                    new XElement("total_price", order.Cost())));
 
             // TODO(topher): where should this file be saved?
             string output_filename = @"C:\Users\topher\Documents\order_" + 
