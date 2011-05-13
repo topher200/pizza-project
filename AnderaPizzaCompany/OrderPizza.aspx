@@ -25,7 +25,8 @@
                 <asp:BoundField DataField="name" HeaderText="Pizza" SortExpression="name" />
                 <asp:BoundField DataField="description" HeaderText="Toppings" 
                     SortExpression="description" />
-                <asp:BoundField DataField="cost" HeaderText="Price" SortExpression="cost" />
+                <asp:BoundField DataField="cost" HeaderText="Price" 
+                    SortExpression="cost" DataFormatString="{0:c}"/>
                 <asp:ButtonField ButtonType="Button" CommandName="AddPizza" 
                     Text="Add to order!" />
             </Columns>

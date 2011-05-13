@@ -19,7 +19,8 @@
                 </asp:TemplateField>
                 <asp:BoundField DataField="topping" HeaderText="Topping" 
                     SortExpression="topping" />
-                <asp:BoundField DataField="cost" HeaderText="Cost" SortExpression="cost" />
+                <asp:BoundField DataField="cost" HeaderText="Cost" 
+                SortExpression="cost" DataFormatString="{0:c}"/>
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="Database" runat="server" 
