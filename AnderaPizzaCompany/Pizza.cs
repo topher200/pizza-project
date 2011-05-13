@@ -41,6 +41,7 @@ namespace AnderaPizzaCompany
             return toppings_string;
         }
 
+        // Cost is the base cost + the cost of each extra topping
         public decimal Cost()
         {
             decimal cost = this.base_cost;
