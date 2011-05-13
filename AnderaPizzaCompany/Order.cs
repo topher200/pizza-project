@@ -28,7 +28,7 @@ namespace AnderaPizzaCompany
             foreach (Pizza p in pizzas)
             {
                 table.Rows.Add(p.name, p.base_toppings, p.ListToppings(), 
-                    p.Cost());
+                    p.Cost().ToString("c"));
             }
 
             return table;

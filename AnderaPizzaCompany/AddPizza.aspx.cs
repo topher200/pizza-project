@@ -24,7 +24,7 @@ namespace AnderaPizzaCompany
             // Display the base description of the pizza
             PizzaLabel.Text = pizza_to_add.name + "; includes " +
                 pizza_to_add.base_toppings + ". Starts at " + 
-                pizza_to_add.base_cost;
+                pizza_to_add.base_cost.ToString("c");
         }
 
         protected void Submit(object sender, EventArgs e)
