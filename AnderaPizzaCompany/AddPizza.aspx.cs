@@ -9,21 +9,18 @@ namespace AnderaPizzaCompany
 {
     public partial class AddPizza : System.Web.UI.Page
     {
+        private Pizza pizza_to_add;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            // TODO(topher): make these "class" variables
             Order order = (Order)Session["order"];
-            if (order == null)
-            {
-                // We can't add a pizza if we haven't started an order yet
+            pizza_to_add = (Pizza)Session["pizza_to_add"];
+            if ((order == null) || (pizza_to_add == null)) {
+                // We can't add a pizza if we haven't started an order or chosen 
+                // the pizza
                 Response.Redirect("OrderPizza.aspx");
             }
-            String pizza_type = Request.QueryString["pizza"];
-            if (pizza_type == null)
-            {
-                // We can't add a pizza if we don't know its type
-                Response.Redirect("OrderPizza.aspx");
-            }
+            Session["pizza_to_add"] = null;
         }
 
         protected void Submit(object sender, EventArgs e)
@@ -32,23 +29,19 @@ namespace AnderaPizzaCompany
 
             if (order != null)
             {
-                // Create a new pizza of the given type
-                String pizza_type = Request.QueryString["pizza"];
-                Pizza pizza = new Pizza(pizza_type);
-
                 // Add checked toppings to the pizza
                 foreach (GridViewRow row in ToppingsGridView.Rows)
                 {
                     CheckBox cb = (CheckBox)row.FindControl("ToppingSelector");
                     if ((cb != null) && (cb.Checked))
                     {
-                        pizza.AddTopping((string) 
+                        pizza_to_add.AddTopping((string) 
                             ToppingsGridView.DataKeys[row.RowIndex].Value);
                     }
                 }
 
                 // Add the pizza to the order, and go back to the order page
-                order.AddPizza(pizza);
+                order.AddPizza(pizza_to_add);
                 Session["order"] = order;
             }
 
