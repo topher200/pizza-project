@@ -20,6 +20,9 @@ namespace AnderaPizzaCompany
                 // We can't checkout if we haven't started an order yet
                 Response.Redirect("OrderPizza.aspx");
             }
+
+            TotalLabel.Text = "Total cost (including sales tax): " + 
+                order.Cost().ToString("c");
         }
 
         protected void OnSubmitButton(Object s, EventArgs e)

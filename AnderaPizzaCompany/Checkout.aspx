@@ -14,6 +14,8 @@
             SelectMethod="GetPizzaDataTable" TypeName="AnderaPizzaCompany.Order"
             OnObjectCreating="OrderObject_ObjectCreating">
         </asp:ObjectDataSource>
+        <br />
+        <asp:Label ID="TotalLabel" runat="server"></asp:Label>
     </h3>
     <p>
         <button id="submit" onserverclick="OnSubmitButton" runat="server">
