@@ -29,5 +29,6 @@
     </p>
     <p>
         <asp:Button Text="Add Pizza to Order" runat="server" onclick="Submit"/>
+        <asp:Button Text="Cancel" runat="server" onclick="Cancel"/>
     </p>
 </asp:Content>

@@ -53,6 +53,13 @@ namespace AnderaPizzaCompany
                 Session["order"] = order;
             }
 
+            Session["pizza_to_add"] = null;
+            Response.Redirect("OrderPizza.aspx");
+        }
+
+        protected void Cancel(object sender, EventArgs e)
+        {
+            Session["pizza_to_add"] = null;
             Response.Redirect("OrderPizza.aspx");
         }
     }
