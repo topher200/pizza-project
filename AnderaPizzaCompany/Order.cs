@@ -39,6 +39,7 @@ namespace AnderaPizzaCompany
             return reference_number;
         }
 
+        // Cost is the cost of each pizza + 7% sales tax
         public decimal Cost()
         {
             decimal cost = 0;
@@ -46,6 +47,7 @@ namespace AnderaPizzaCompany
             {
                 cost += p.Cost();
             }
+            cost += cost * Convert.ToDecimal(0.07); // Tax
             return cost;
         }
 
