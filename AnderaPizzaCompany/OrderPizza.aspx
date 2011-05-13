@@ -6,7 +6,7 @@
         Pizza Ordering Page
     </h2>
     <p>
-        You currently have these pizzas:
+        Current order:
         <br />
         <asp:GridView ID="PizzaGridView" runat="server" DataSourceID="OrderObject">
         </asp:GridView>
