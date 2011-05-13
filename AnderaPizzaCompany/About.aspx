@@ -8,10 +8,10 @@
         About Us
     </h2>
     <p>
-        Andera Pizza Company
-        204 Westminster Street
-        Providence, RI 02903
-
+        Andera Pizza Company<br />
+        204 Westminster Street<br />
+        Providence, RI 02903<br />
+        <br />
         Tel: 401.555.1212
     </p>
 </asp:Content>
