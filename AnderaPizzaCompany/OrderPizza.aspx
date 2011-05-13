@@ -16,7 +16,7 @@
         </asp:ObjectDataSource>
     </p>
     <p>
-        Would you like to add a pizza to your order?
+        Choose which pizza to add to your order:
         <asp:GridView ID="PizzasGridView" runat="server" 
             AutoGenerateColumns="False" DataSourceID="DatabasePizzas"
             OnRowCommand="PizzasGridView_RowCommand" 
