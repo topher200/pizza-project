@@ -47,6 +47,8 @@ namespace AnderaPizzaCompany
             {
                 xml.Save(fs);
             }
+
+            Response.Redirect("OrderComplete.aspx");
         }
 
         protected void Cancel(Object s, EventArgs e)
