@@ -9,6 +9,11 @@
         You currently have these pizzas:
         <br />
         <asp:Label ID="label_pizza0" Text="" runat="server" />
+        <asp:GridView ID="PizzaGridView" runat="server" DataSourceID="OrderObject">
+        </asp:GridView>
+        <asp:ObjectDataSource ID="OrderObject" runat="server" 
+            SelectMethod="GetPizzaDataTable" TypeName="AnderaPizzaCompany.Order">
+        </asp:ObjectDataSource>
     </p>
     <p>
         Would you like to add a pizza to your order?
