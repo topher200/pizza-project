@@ -6,7 +6,6 @@
         Add a Pizza to your order
     </h2>
     <p>
-        <asp:CheckBox Text="Broccoli" runat="server" id="checkbox_broccoli"/>
         <asp:GridView ID="ToppingsGridView" runat="server" AutoGenerateColumns="False" 
             DataSourceID="Database" DataKeyNames="topping, cost">
             <Columns>
