@@ -5,6 +5,9 @@
     <h2>
         Choose your extra toppings
     </h2>
+    <h3>
+        Pizza: <asp:Label ID="PizzaLabel" runat="server" Text="Label"></asp:Label>
+    </h3>
     <p>
         <asp:GridView ID="ToppingsGridView" runat="server" AutoGenerateColumns="False" 
             DataSourceID="Database" DataKeyNames="topping, cost">

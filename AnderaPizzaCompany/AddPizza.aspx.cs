@@ -13,13 +13,18 @@ namespace AnderaPizzaCompany
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Check the Session variables to make sure we have started an order
+            // and chose a pizza to add
             Order order = (Order)Session["order"];
             pizza_to_add = (Pizza)Session["pizza_to_add"];
             if ((order == null) || (pizza_to_add == null)) {
-                // We can't add a pizza if we haven't started an order or chosen 
-                // the pizza
                 Response.Redirect("OrderPizza.aspx");
             }
+
+            // Display the base description of the pizza
+            PizzaLabel.Text = pizza_to_add.name + "; includes " +
+                pizza_to_add.base_toppings + ". Starts at " + 
+                pizza_to_add.base_cost;
         }
 
         protected void Submit(object sender, EventArgs e)
