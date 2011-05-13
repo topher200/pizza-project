@@ -54,9 +54,8 @@ namespace AnderaPizzaCompany
 
         protected void Cancel(Object s, EventArgs e)
         {
-            // Go back to main page
             Session["order"] = null;
-            Response.Redirect("Default.aspx");
+            Response.Redirect("OrderPizza.aspx");
         }
 
         protected void OrderObject_ObjectCreating(object sender, 
