@@ -3,12 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        Choose your extra toppings
+        Add extra toppings
     </h2>
     <h3>
         Pizza: <asp:Label ID="PizzaLabel" runat="server" Text="Label"></asp:Label>
     </h3>
     <p>
+        Want extra toppings? Check below to add a topping to your pizza
         <asp:GridView ID="ToppingsGridView" runat="server" AutoGenerateColumns="False" 
             DataSourceID="Database" DataKeyNames="topping, cost">
             <Columns>

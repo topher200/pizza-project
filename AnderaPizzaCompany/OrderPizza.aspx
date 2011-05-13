@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>
-        Pizza Ordering Page
+        Order Pizza
     </h2>
     <p>
         Current order:
