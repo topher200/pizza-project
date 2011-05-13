@@ -5,6 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// AddPizza allows the customer to add extra toppings to their Pizza.
+//
+// This page can only be reached by OrderPizza, and only returns to there.
+//
+// After choosing the "base" type of pizza, customers use this page to customize
+// their pizza with extra toppings and finally add it to their order.
+
 namespace AnderaPizzaCompany
 {
     public partial class AddPizza : System.Web.UI.Page

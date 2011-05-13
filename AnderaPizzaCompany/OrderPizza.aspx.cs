@@ -5,6 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// OrderPizza is the main page of the ordering system.
+// 
+// From here, the user can add new pizzas to their order (-> AddPizza) or 
+// complete their order and check out (-> Checkout).
+
 namespace AnderaPizzaCompany
 {
     public partial class OrderPizza : System.Web.UI.Page

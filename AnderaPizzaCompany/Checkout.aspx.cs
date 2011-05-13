@@ -6,6 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 
+// The Checkout page gives the user a final summary of their order.
+//
+// Upon clicking the Submit button on this page, the order's XML file has been
+// written and the order is officially placed.
+
 namespace AnderaPizzaCompany
 {
     public partial class Checkout : System.Web.UI.Page
@@ -27,6 +32,7 @@ namespace AnderaPizzaCompany
 
         protected void OnSubmitButton(Object s, EventArgs e)
         {
+            // Create the XML document
             XDocument xml = new XDocument(
                 new XElement("order",
                     new XElement("reference_number", order.GetReferenceNumber().ToString()),
@@ -40,6 +46,7 @@ namespace AnderaPizzaCompany
                     new XElement("total_price", order.Cost().ToString("c")),
                     new XElement("order_time", DateTime.Now.ToString())));
 
+            // Write the XML to file
             // TODO(topher): where should this file be saved?
             string output_filename = @"C:\Users\topher\Documents\order_" + 
                 order.GetReferenceNumber() + ".xml";

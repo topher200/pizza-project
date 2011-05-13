@@ -5,6 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// OrderComplete gives the user confirmation of their order and their reference 
+// number.
+//
+// Returns the user to the Home page after completion.
+
 namespace AnderaPizzaCompany
 {
     public partial class OrderComplete : System.Web.UI.Page
